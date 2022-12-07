@@ -47,7 +47,11 @@ namespace Exe4_A
         }
         public void display()
         {
-
+            if(top == -1)
+            {
+                Console.WriteLine("Stack is Empty");
+                return ;
+            }
         }
     }
 }
