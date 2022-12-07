@@ -63,16 +63,39 @@ namespace Exe4_A
     }
     class Program
     {
-        static void Main()
+        static void Main(string[]args)
         {
-            Stack st = new Stack(5);
+            Stack st = new Stack(49);
 
-            st.push(49);
-
-            Console.WriteLine("Items Are : ");
-            st.display();
-
-            st.pop();
+            Console.WriteLine();
+            Console.WriteLine("\n**************Stack Menu*************\n");
+            Console.WriteLine("1.Push");
+            Console.WriteLine("2.Pop");
+            Console.WriteLine("3.Display");
+            Console.WriteLine("4.Exit");
+            Console.WriteLine("\nEnter your choice");
+            string sInput = Console.ReadLine();
+            char ch = Convert.ToChar(sInput == "" ? "0" : sInput);
+            switch (ch)
+            {
+                case '1':
+                    Console.WriteLine("Enter a Number : ");
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    st.push(num);
+                    break;
+                case '2':
+                    st.pop();
+                    break;
+                case '3':
+                    Console.WriteLine("Display Element");
+                    st.display();
+                    break;
+                case '4':
+                    return;
+                case '5':
+                    Console.WriteLine("Invalid Chooice");
+                    break;
+            }
 
 
         }
