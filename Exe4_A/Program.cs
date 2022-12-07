@@ -16,7 +16,7 @@ namespace Exe4_A
         {
             fad = new int[ukuran];
             top = -1;
-            max = ukuran;
+            max = 49;
 
         }
         public void push(int item)
@@ -29,7 +29,7 @@ namespace Exe4_A
             else
             {
                 fad[++top]=item;  
-                Console.WriteLine("Element"+ item+ "pushed");
+                Console.WriteLine("Element " + item + " pushed");
             } 
 
         }
@@ -42,7 +42,7 @@ namespace Exe4_A
             }
             else
             {
-                Console.WriteLine("Popped Element is: " +fad[top]);
+                Console.WriteLine("Popped Element is: " + fad[top]);
                 return fad[top--];
             }
         }
