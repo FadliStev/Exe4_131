@@ -45,6 +45,9 @@ namespace Exe4_A
                 return st[top--];
             }
         }
+        public void display()
+        {
 
+        }
     }
 }
