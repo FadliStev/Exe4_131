@@ -8,13 +8,13 @@ namespace Exe4_A
 {
     class Stack
     {
-        private int[] st;
+        private int[] fad;
         private int top;
         private int max;
 
         public Stack(int ukuran)
         {
-            st = new int[ukuran];
+            fad = new int[ukuran];
             top = -1;
             max = ukuran;
 
@@ -28,7 +28,7 @@ namespace Exe4_A
             }
             else
             {
-                st[++top]=item;   
+                fad[++top]=item;   
             } 
 
         }
@@ -41,8 +41,8 @@ namespace Exe4_A
             }
             else
             {
-                Console.WriteLine("Popped Element is: " +st[top]);
-                return st[top--];
+                Console.WriteLine("Popped Element is: " +fad[top]);
+                return fad[top--];
             }
         }
         public void display()
@@ -56,9 +56,16 @@ namespace Exe4_A
             {
                 for(int i = 0; i < top; i++)
                 {
-                    Console.WriteLine("Item ["+ (i +1) + "]: "+ st[i]);
+                    Console.WriteLine("Item ["+ (i +1) + "]: "+ fad[i]);
                 }
             }
+        }
+    }
+    class Program
+    {
+        static void Main()
+        {
+
         }
     }
 }
