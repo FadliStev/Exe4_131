@@ -12,7 +12,13 @@ namespace Exe4_A
         private int top;
         private int max;
 
+        public Stack(int ukuran)
+        {
+            st = new int[ukuran];
+            top = -1;
+            max = ukuran;
 
+        }
 
     }
 }
