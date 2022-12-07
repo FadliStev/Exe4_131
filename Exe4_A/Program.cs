@@ -32,6 +32,19 @@ namespace Exe4_A
             } 
 
         }
+        public int pop()
+        {
+            if(top == -1)
+            {
+                Console.WriteLine("Stack Underflow");
+                return -1;  
+            }
+            else
+            {
+                Console.WriteLine("Popped Element is: " +st[top]);
+                return st[top--];
+            }
+        }
 
     }
 }
