@@ -65,6 +65,15 @@ namespace Exe4_A
     {
         static void Main()
         {
+            Stack st = new Stack(5);
+
+            st.push(49);
+
+            Console.WriteLine("Items Are : ");
+            st.display();
+
+            st.pop();
+
 
         }
     }
