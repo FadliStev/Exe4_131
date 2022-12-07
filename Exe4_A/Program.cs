@@ -19,6 +19,19 @@ namespace Exe4_A
             max = ukuran;
 
         }
+        public void push(int item)
+        {
+            if(top == max - 1)
+            {
+                Console.WriteLine("Stack Ofervlow");
+                return; 
+            }
+            else
+            {
+                st[++top]=item;   
+            } 
+
+        }
 
     }
 }
