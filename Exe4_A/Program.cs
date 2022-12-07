@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Exe4_A
 {
-    internal class Program
+    class Stack
     {
-        static void Main(string[] args)
-        {
-        }
+        private int[] st;
+        private int top;
+        private int max;
+
+
+
     }
 }
