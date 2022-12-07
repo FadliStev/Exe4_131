@@ -8,7 +8,7 @@ namespace Exe4_A
 {
     class Stack
     {
-        private int[] fad;
+        private int []fad = new int [49];
         private int top;
         private int max;
 
@@ -28,7 +28,8 @@ namespace Exe4_A
             }
             else
             {
-                fad[++top]=item;   
+                fad[++top]=item;  
+                Console.WriteLine("Element"+ item+ "pushed");
             } 
 
         }
@@ -47,6 +48,7 @@ namespace Exe4_A
         }
         public void display()
         {
+            
             if(top == -1)
             {
                 Console.WriteLine("Stack is Empty");
@@ -58,7 +60,9 @@ namespace Exe4_A
                 {
                     Console.WriteLine("Item ["+ (i +1) + "]: "+ fad[i]);
                 }
+                Console.WriteLine();
             }
+
         }
     }
     class Program
@@ -67,34 +71,37 @@ namespace Exe4_A
         {
             Stack st = new Stack(49);
 
-            Console.WriteLine();
-            Console.WriteLine("\n**************Stack Menu*************\n");
-            Console.WriteLine("1.Push");
-            Console.WriteLine("2.Pop");
-            Console.WriteLine("3.Display");
-            Console.WriteLine("4.Exit");
-            Console.WriteLine("\nEnter your choice");
-            string sInput = Console.ReadLine();
-            char ch = Convert.ToChar(sInput == "" ? "0" : sInput);
-            switch (ch)
+            while (true)
             {
-                case '1':
-                    Console.WriteLine("Enter a Number : ");
-                    int num = Convert.ToInt32(Console.ReadLine());
-                    st.push(num);
-                    break;
-                case '2':
-                    st.pop();
-                    break;
-                case '3':
-                    Console.WriteLine("Display Element");
-                    st.display();
-                    break;
-                case '4':
-                    return;
-                case '5':
-                    Console.WriteLine("Invalid Chooice");
-                    break;
+                Console.WriteLine();
+                Console.WriteLine("\n**************Stack Menu*************\n");
+                Console.WriteLine("1.Push");
+                Console.WriteLine("2.Pop");
+                Console.WriteLine("3.Display");
+                Console.WriteLine("4.Exit");
+                Console.WriteLine("\nEnter your choice");
+                string sInput = Console.ReadLine();
+                char ch = Convert.ToChar(sInput == "" ? "0" : sInput);
+                switch (ch)
+                {
+                    case '1':
+                        Console.WriteLine("Enter a Number : ");
+                        int num = Convert.ToInt32(Console.ReadLine());
+                        st.push(num);
+                        break;
+                    case '2':
+                        st.pop();
+                        break;
+                    case '3':
+                        Console.WriteLine("Display Element");
+                        st.display();
+                        break;
+                    case '4':
+                        return;
+                    case '5':
+                        Console.WriteLine("Invalid Chooice");
+                        break;
+                }
             }
 
 
